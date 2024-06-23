@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de costos Impresión 3D - EZE_</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png"/>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Calculadora de costos Impresión 3D - EZE_</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimizar" style="padding: 0;">_</button>
+                <button aria-label="Maximizar"  style="padding: 0;">□</button>
+                <button aria-label="Cerrar"  style="padding: 0;">X</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <form id="calc-form">
+                <div class="field-row" >
+                    <label for="material-cost">Costo del material (por kg):</label>
+                    <input id="material-cost" type="number" value="15000">
+                </div>
+                <div class="field-row">
+                    <label for="material-weight">Peso del material (en gramos):</label>
+                    <input id="material-weight" type="number" value="50">
+                </div>
+                <div class="field-row">
+                    <label for="print-time">Tiempo de impresión (horas):</label>
+                    <input id="print-time" type="number" value="5">
+                </div>
+                <div class="field-row">
+                    <label for="hourly-rate">Costo por hora de impresión:</label>
+                    <input id="hourly-rate" type="number" value="0.25">
+                </div>
+                <div class="field-row">
+                    <label for="electricity-cost">Costo de electricidad por kWh:</label>
+                    <input id="electricity-cost" type="number" value="15">
+                </div>
+                <div class="field-row">
+                    <label for="exchange-rate">Tipo de cambio (USD a ARS):</label>
+                    <input id="exchange-rate" type="number" value="1300">
+                </div>
+                <div class="field-row">
+                    <label for="profit-margin">Margen de ganancia (%):</label>
+                    <input id="profit-margin" type="number" value="20">
+                </div>
+                <div class="field-row">
+                    <button type="button" onclick="calculateCost()">Calcular Costo</button>
+                </div>
+            </form>
+            <div id="results">
+                <p id="cost-ars">Costo en Pesos Argentinos: $0</p>
+                <p id="cost-usd">Costo en Dólares: $0</p>
+                <p id="final-cost-ars">Costo Final en Pesos Argentinos (con ganancia): $0</p>
+                <p id="final-cost-usd">Costo Final en Dólares (con ganancia): $0</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <div class="footer-button">
+        <button type="button"><a href="https://www.matecito.co/EZE_" target="_blank" style="text-decoration: none; color: #000;"> Donar</a></button>
+    </div>
+    <div class="footer-content">
+        <img src="img/logo.png" alt="Logo" class="footer-logo">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/eze-web/" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/EZE_404_" target="_blank">Instagram</a>
+            <a href="https://www.behance.net/EZE_" target="_blank">Behance</a>
+            <a href="https://ezeweb.github.io/EZE_/" target="_blank">Portfolio</a>
+        </div>
+    </div>
+</footer>
+</html>
